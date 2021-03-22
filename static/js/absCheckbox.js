@@ -30,7 +30,7 @@ function fill_data(response) {
     $("#marked_count").html(response.data.marked_count)
     $("#marked_index").html(response.data.marked_index)
 }
-
+//获取分类
 function save_get_classify(marked_index, to_index) {
     let check_boxes = []
     $('input:checkbox[name="checkbox"]:checked').each(function () {

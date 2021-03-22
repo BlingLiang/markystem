@@ -83,3 +83,7 @@ nav ul li {
     transform: translateY(-50%);
     border-width: thick;border-color:black
 }
+.large{
+    font-size:1.2em;
+    font-weight: bolder;
+}

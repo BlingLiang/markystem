@@ -103,8 +103,8 @@ $().ready(function () {
                     '<label class="radio-inline"><input type="radio" name="radio" id="newRadio">' + categories[i] +
                     '</label>'
                 )
-                $("#newRadio").val(categories[i]);
-                $("#newRadio").attr("id", categories[i]);
+                $("#newRadio").val(categories[i]).attr("id", categories[i]);
+                // $("#newRadio").attr("id", categories[i]);
             }
         },
         error: function () {
@@ -152,7 +152,7 @@ $().ready(function () {
         } else {
             save_get_classify(marked_index, parseInt(marked_jump))
         }
-        $("#jumpTo").val('');
+        marked_jump.val('');
     })
 
     //暂时保存键，将本页的值回传

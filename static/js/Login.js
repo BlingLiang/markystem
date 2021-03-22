@@ -1,7 +1,21 @@
-//登陆注册页面所需js
+
 //注册
 $().ready(function () {
-    //
+    $('#loginText').click(function () {
+        $('#regiText').attr("class",'')
+        $('#loginText').attr("class",'large')
+        $('#login').css("display",'inline')
+        $('#register').css("display",'none')
+
+    })
+    $('#regiText').click(function () {
+        $('#loginText').attr("class",'')
+        $('#regiText').attr("class",'large')
+        $('#login').css("display",'none')
+        $('#register').css("display",'inline')
+
+    })
+    //注册
     $("#register").click(function () {
         var email = $("#email").val();
         var password = $("#password").val();
