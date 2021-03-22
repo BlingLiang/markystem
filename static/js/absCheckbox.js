@@ -1,14 +1,19 @@
 //获取来自主页的id
 let task_id = getQueryString("id");
+let task_title = decodeURI(getQueryString("title"));
 let url_submit_classify = "http://10.8.28.164/api/submit_classify/" + task_id
 let url_get_classify = "http://10.8.28.164/api/get_classify/" + task_id
 let url_get_category = "http://10.8.28.164/api/get_category/" + task_id
 let authorization = "Bearer " + window.localStorage.getItem("token")
 
-console.log(task_id);
+// console.log(task_id);
+
+console.log(task_title);
+
 
 //通过页面传值方法
 function getQueryString(id) {
+
     let result = window.location.search.match(new RegExp("[\?\&]" + id + "=([^\&]+)", "i"));
     if (result == null || result.length < 1) {
         return "";
@@ -95,6 +100,7 @@ function save_classify(success) {
 
 $().ready(function () {
 
+    $("#title").html(task_title)
     $.ajax({
         type: "get",
         headers: {
@@ -108,11 +114,10 @@ $().ready(function () {
             let categories = response.data
             for (let i = 0; i < categories.length; i++) {
                 $("#addCheckbox").append(
-                    '<label class="checkbox-inline"><input type="checkbox" name="checkbox" id="newCheckbox">' + categories[i] +
+                    '<label class="checkbox-inline col-md-3"><input type="checkbox" name="checkbox" id="newCheckbox">' + categories[i] +
                     '</label>'
                 )
-                $("#newCheckbox").val(categories[i]);
-                $("#newCheckbox").attr("id", categories[i]);
+                $("#newCheckbox").val(categories[i]).attr("id", categories[i]);
             }
         },
         error: function () {
@@ -160,7 +165,7 @@ $().ready(function () {
         } else {
             save_get_classify(marked_index, parseInt(marked_jump))
         }
-        $("#jumpTo").val('');
+        marked_jump.val('');
     })
 
     //暂时保存键，将本页的值回传

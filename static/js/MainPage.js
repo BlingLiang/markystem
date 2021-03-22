@@ -31,7 +31,7 @@ $().ready(function () {
             for (var i = 0; i < strs.data.length; i++) {
 
                 $("#createPro").append(
-                    '<div class="col-12 col-md-4 col-xs-12" id="x" >' +
+                    '<div class="col-12 col-md-4 col-xs-12 box" id="x" >' +
                     '<a href="#" class="thumbnail" id="a" >' +
                     '<div class="card mt-5">' +
                     '<h5 class="card-header text-center bg-primary text-white">' + strs.data[i].title +
@@ -63,10 +63,11 @@ $().ready(function () {
 
                 console.log(url);
                 // $("#x.thumbnail").attr("href", url+"?id="+strs.data[i].id);
-                $("#a").attr("href", url + "?id=" + strs.data[i].id);
-                $("#a").attr("id", url);
+                var newUrl = encodeURI(url + "?id="+strs.data[i].id + "&title=" + strs.data[i].title)
+                $("#a").attr("href", newUrl).attr("id", url + "?id=" + strs.data[i].id);
                 //修改每一个的id
-                $("#x").attr("id", strs.data[i].id);
+                $("#x").attr("id", strs.data[i].title);
+
 
             }
         },
@@ -75,7 +76,10 @@ $().ready(function () {
         error: function () {
             alert("验证失败,请检查您的网络设置或与管理人员联系");
         }
+
     })
+
+
 });
 
 

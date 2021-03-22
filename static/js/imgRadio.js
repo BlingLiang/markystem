@@ -1,5 +1,6 @@
 //获取来自主页的id
 let task_id = getQueryString("id");
+let task_title = window.localStorage.getItem("title")
 let url_submit_classify = "http://10.8.28.164/api/submit_classify/" + task_id
 let url_get_classify = "http://10.8.28.164/api/get_classify/" + task_id
 let url_get_category = "http://10.8.28.164/api/get_category/" + task_id
@@ -86,6 +87,8 @@ function save_classify(success) {
 }
 
 $().ready(function () {
+    $("#title").html(task_title)
+    window.localStorage.removeItem("title")
 
     $.ajax({
         type: "get",

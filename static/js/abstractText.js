@@ -1,12 +1,13 @@
 $().ready(function () {
     //获取来自主页的id
     let task_id = getQueryString("id");
+    let task_title = decodeURI(getQueryString("title"));
     let url_submit_abstract = "http://10.8.28.164/api/submit_abstract/" + task_id
     let url_get_abstract = "http://10.8.28.164/api/get_abstract/" + task_id
     let authorization = "Bearer " + window.localStorage.getItem("token")
 
-    console.log(task_id);
-
+    console.log(task_title);
+    $("#title").html(task_title)
     //通过页面传值方法
     function getQueryString(id) {
         let result = window.location.search.match(new RegExp("[\?\&]" + id + "=([^\&]+)", "i"));
