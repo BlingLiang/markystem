@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8fc7014-985d-458e-96e8-f667bbcb003e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkboxText.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkboxText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/radioText.html" beforeDir="false" afterPath="$PROJECT_DIR$/radioText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setTexts.html" beforeDir="false" afterPath="$PROJECT_DIR$/setTexts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/absCheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/absCheckbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/absRadio.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/absRadio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/abstractText.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/abstractText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/imgCheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/imgCheckbox.js" afterDir="false" />
@@ -46,7 +39,7 @@
       <workItem from="1616305118413" duration="231000" />
       <workItem from="1616383027021" duration="3000" />
       <workItem from="1616383035560" duration="4084000" />
-      <workItem from="1616389297213" duration="4153000" />
+      <workItem from="1616389297213" duration="4332000" />
     </task>
     <servers />
   </component>

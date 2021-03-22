@@ -112,11 +112,10 @@ $().ready(function () {
             let categories = response.data
             for (let i = 0; i < categories.length; i++) {
                 $("#addCheckbox").append(
-                    '<label class="checkbox-inline"><input type="checkbox" name="checkbox" id="newCheckbox">' + categories[i] +
+                    '<label class="checkbox-inline col-md-3"><input type="checkbox" name="checkbox" id="newCheckbox">' + categories[i] +
                     '</label>'
                 )
-                $("#newCheckbox").val(categories[i]);
-                $("#newCheckbox").attr("id", categories[i]);
+                $("#newCheckbox").val(categories[i]).attr("id", categories[i]);
             }
         },
         error: function () {

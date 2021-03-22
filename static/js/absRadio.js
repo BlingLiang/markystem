@@ -102,7 +102,7 @@ $().ready(function () {
             let categories = response.data
             for (let i = 0; i < categories.length; i++) {
                 $("#addRadio").append(
-                    '<label class="radio-inline"><input type="radio" name="radio" id="newRadio">' + categories[i] +
+                    '<label class="radio-inline col-md-3"><input type="radio" name="radio" id="newRadio">' + categories[i] +
                     '</label>'
                 )
                 $("#newRadio").val(categories[i]).attr("id", categories[i]);

@@ -20,7 +20,7 @@ $().ready(function () {
     //将值填充到具体位置
     function fill_data(response) {
         $("#content").html(response.data.content)
-        $("#abstract_text").html(response.data.abstract_text)
+        $("#abstract_text").val(response.data.abstract_text)
         $("#left_count").html(response.data.left_count)
         $("#marked_count").html(response.data.marked_count)
         $("#marked_index").html(response.data.marked_index)
