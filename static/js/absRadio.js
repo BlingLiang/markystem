@@ -30,6 +30,7 @@ function fill_data(response) {
     $("#left_count").html(response.data.left_count)
     $("#marked_count").html(response.data.marked_count)
     $("#marked_index").html(response.data.marked_index)
+    if(response.data.marked_index===1){$("#left").addClass("disabled")}else {$("#left").removeClass("disabled")}//第一篇不可点上一页
 }
 
 function save_get_classify(marked_index, to_index) {
@@ -154,7 +155,7 @@ $().ready(function () {
         } else {
             save_get_classify(marked_index, parseInt(marked_jump))
         }
-        marked_jump.val('');
+        $("#jumpTo").val('');
     })
 
     //暂时保存键，将本页的值回传

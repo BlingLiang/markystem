@@ -24,6 +24,7 @@ $().ready(function () {
         $("#left_count").html(response.data.left_count)
         $("#marked_count").html(response.data.marked_count)
         $("#marked_index").html(response.data.marked_index)
+        if(response.data.marked_index===1){$("#left").addClass("disabled")}else {$("#left").removeClass("disabled")}//第一篇不可点上一页
     }
 
     function save_get_abstract(marked_index, to_index) {
@@ -115,6 +116,7 @@ $().ready(function () {
         } else {
             alert("只能跳转到已标注过的页面")
         }
+        $("#jumpTo").val('');
     })
 
     //暂时保存键，将本页的值回传
